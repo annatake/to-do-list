@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   /*background-image: linear-gradient(45deg, #bbffcf, #f7ee8f);*/
   background: rgb(225, 255, 215);
   font-family: "Poppins", sans-serif;
-  min-height: 100vh;
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -24,8 +26,10 @@ header, form {
 }
 
 form {
-  min-height: 10vh;
-  min-width: 70vw;
+  min-height: 6vh;
+  min-width: 80%;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 form input, form button {
@@ -60,7 +64,7 @@ form button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .todo-list {
@@ -132,7 +136,6 @@ select {
   position: relative;
   overflow: hidden;
   border-radius: 5px;
-
 }
 
 select {
@@ -162,6 +165,8 @@ select {
 }
 
 .container {
+  width: 80%;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,11 +183,12 @@ select {
   border-radius: 15px;
   border: 1px solid rgba( 255, 255, 255, 0.2);
   padding: 15px;
+  margin: 2rem;
 }
 
 .circle {
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   z-index: -1;
 }
 
@@ -228,5 +234,113 @@ select {
   width: 28rem;
   background: rgb(255, 237, 166);
   top: -1.5rem;
-  right: -6rem;
+  right: -1rem;
+}
+
+/** For smaller screens (mobile phones) **/
+@media screen and (max-width: 500px) {
+  header {
+    min-height: 8vh;
+    margin-top: 2rem;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  form {
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: .5rem;
+  }
+
+  .select {
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .circle-2 {
+    filter: blur(50px);
+    height: 20rem;
+    width: 28rem;
+    background: rgb(252, 195, 217);
+    top: 10rem;
+    left: 2rem;
+  }
+
+  .circle-3 {
+    filter: blur(45px);
+    height: 28rem;
+    width: 22rem;
+    background: rgb(166, 239, 255);
+    top: 2rem;
+    right: 30%;
+  }
+  
+  .circle-4 {
+    filter: blur(65px);
+    height: 28rem;
+    width: 35rem;
+    background: rgb(185, 173, 254);
+    bottom: -10rem;
+    right: 1rem;
+  }
+  
+  .circle-5 {
+    filter: blur(45px);
+    height: 15rem;
+    width: 18rem;
+    background: rgb(255, 237, 166);
+    top: -1.5rem;
+    right: -3rem;
+  }
+}
+
+/** For larger screens (desktop, tablets) **/
+@media screen and (min-width: 1000px) {
+  .glass{
+    min-width: 90%;
+  }
+
+  .todo-list {
+    min-width: 70%;
+  }
+
+  .circle-2 {
+    filter: blur(60px);
+    height: 50rem;
+    width: 48rem;
+    background: rgb(252, 195, 217);
+    top: 25rem;
+    left: -10rem;
+  }
+  
+  .circle-3 {
+    filter: blur(50px);
+    height: 40rem;
+    width: 35rem;
+    background: rgb(166, 239, 255);
+    top: 0rem;
+    right: 20%;
+  }
+  
+  .circle-4 {
+    filter: blur(75px);
+    height: 42rem;
+    width: 48rem;
+    background: rgb(185, 173, 254);
+    bottom: -10rem;
+    right: -6rem;
+  }
+  
+  .circle-5 {
+    filter: blur(65px);
+    height: 25rem;
+    width: 28rem;
+    background: rgb(255, 237, 166);
+    top: 1rem;
+    right: -10rem;
+  }
 }
