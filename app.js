@@ -15,12 +15,18 @@ filter.addEventListener('click', filterTodo);
 function addTodo(event) {
   // Prevent form from submitting
   event.preventDefault();
+
+  // Do not add todo if form is empty or only contains whitespaces
+  if (todoInput.value.trim() === "") {
+    return;
+  }
+
   // Todo DIV
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
   // Create LI
   const newTodo = document.createElement("li");
-  newTodo.innerText = todoInput.value;
+  newTodo.innerText = todoInput.value.trim();
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
 
