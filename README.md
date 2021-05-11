@@ -11,7 +11,7 @@ I have added modifications and creative touches to make it my own, by experiment
 * Adding filter feature to filter todo items by completed or incomplete state
 
 ## Future Improvements
-* Add persistence to checked-off todo items
-* Move checked-off todo items to the bottom of the list 
-* Add ability to select date to have todo item completed by
-* Re-design app UI to include the above features if needed
+- [x] Add persistence to checked-off todo items
+- [ ] Move checked-off todo items to the bottom of the list 
+- [ ] Add ability to select date to have todo item completed by
+- [ ] Re-design app UI to include the above features if needed
