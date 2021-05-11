@@ -3,6 +3,8 @@ A simple To-Do list, inspired by [developedbyed](https://github.com/developedbye
 
 I have added modifications and creative touches to make it my own, by experimenting with CSS filters and gradients to achieve a glassmorphism style.
 
+Check out the **live preview** [here](https://annatake.github.io/to-do-list/)!
+
 ## Skills I Learned
 * Using javascript event listeners to dynamically add/check/delete todo items when clicking a button
 * Converting todo list data to JSON and utilize local storage to persist the todo list items
