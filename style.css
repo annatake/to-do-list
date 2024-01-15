@@ -237,7 +237,15 @@ select {
   right: -1rem;
 }
 
-/** For smaller screens (mobile phones) **/
+/** For extra small screens (mobile phones) **/
+@media screen and (max-width: 399px) {
+  .todo-button {
+    margin-top: 1rem;
+    border-radius: 5px 5px 5px 5px;
+  }
+}
+
+/** For small screens (mobile phones) **/
 @media screen and (max-width: 500px) {
   header {
     min-height: 8vh;
@@ -298,7 +306,7 @@ select {
   }
 }
 
-/** For larger screens (desktop, tablets) **/
+/** For large screens (desktop, tablets) **/
 @media screen and (min-width: 1000px) {
   .glass{
     min-width: 90%;
